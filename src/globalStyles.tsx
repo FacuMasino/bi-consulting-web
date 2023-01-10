@@ -23,7 +23,7 @@ export const FontSize = {
 	desktop: {
 		heading: '2.2rem',
 		subHeading: '1.4rem',
-		paragraph: '1.2rem',
+		paragraph: '1.12rem',
 	},
 	mobile: {
 		heading: '2rem',

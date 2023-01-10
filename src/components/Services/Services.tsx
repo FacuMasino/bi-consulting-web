@@ -1,17 +1,31 @@
 import React from 'react'
-import { Heading, ServicesRow, ServicesSection } from './Services.elements'
+import { Heading, ServicesContainer, ServicesSection } from './Services.elements'
 import { Container } from '../../globalStyles';
+import ServicesCard from '../ServicesCard/ServicesCard';
 
-const Services = () => {
+type ServicesCardInfo = {
+	cardImgUrl: string,
+	cardTitle: string,
+	cardText: string,
+}
+
+interface ServicesCardList {
+	servicesArray: Array<ServicesCardInfo>;
+}
+
+const Services = ({servicesArray}: ServicesCardList) => {
   return (
 	<ServicesSection>
 		<Container>
 			<Heading>Lo que ofrecemos</Heading>
-			<ServicesRow>
-				<div>1</div>
-				<div>2</div>
-				<div>3</div>
-			</ServicesRow>
+			<ServicesContainer>
+				{servicesArray.map((info) =>{
+					return (
+						<ServicesCard {...info} />
+					);
+				})}
+				{/* <ServicesCard /> */}
+			</ServicesContainer>
 		</Container>
 	</ServicesSection>
   )

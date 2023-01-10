@@ -41,7 +41,7 @@ export const InfoText = styled.p<InfoSectionProps>`
 	font-style: normal;
 	font-weight: 400;
 	font-size: ${FontSize.desktop.paragraph};
-	line-height: 22px;
+	line-height: 1.28rem;
 	text-align: ${({textAlign}) => textAlign ? textAlign : 'left'};
 	color: ${Colors.neutral.veryDarkGray};
 	@media screen and (max-width: 960px) {

@@ -1,8 +1,21 @@
 import React from 'react'
+import { CardBody, CardImg, CardWrapper, CardTitle, CardText } from './ServicesCard.elements'
 
-const ServicesCard = () => {
+interface ServicesCardProps {
+	cardImgUrl: string,
+	cardTitle: string,
+	cardText: string,
+}
+
+const ServicesCard = ({cardImgUrl, cardTitle, cardText}: ServicesCardProps): JSX.Element => {
   return (
-	<div>ServicesCard</div>
+	<CardWrapper>
+		<CardImg src={cardImgUrl} />
+		<CardBody>
+			<CardTitle>{cardTitle}</CardTitle>
+			<CardText>{cardText}</CardText>
+		</CardBody>
+	</CardWrapper>
   )
 }
 

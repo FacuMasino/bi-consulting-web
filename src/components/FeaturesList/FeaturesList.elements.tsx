@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FontSize } from '../../globalStyles';
+import { Colors, FontSize } from '../../globalStyles';
 
 interface IFeaturesList { 
 	flexDir: 'row' | 'column';
@@ -45,6 +45,7 @@ export const TextItem = styled.h3`
 	font-weight: 700;
 	font-size: ${FontSize.desktop.subHeading};
 	line-height: 2.25rem;
+	color: ${Colors.primary.blue};
 	@media screen and (max-width: 960px) { 
 		font-size: 1rem;
 		line-height: ${FontSize.mobile.subHeading};

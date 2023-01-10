@@ -16,6 +16,16 @@ interface IFeaturesList {
 	featuresArray: Array<TFeaturesList>;
 }
 
+type ServicesCardInfo = {
+	cardImgUrl: string,
+	cardTitle: string,
+	cardText: string,
+}
+
+interface ServicesCardList {
+	servicesArray: Array<ServicesCardInfo>;
+}
+
 export const sectionOne: ISection = {
 	textAlign: 'center',
 	flexDir: 'column',
@@ -41,3 +51,23 @@ export const featuresList: IFeaturesList = {
 					},
 				]
 }
+
+export const servicesList: ServicesCardList = {
+	servicesArray: [
+		{
+			cardImgUrl: '/assets/images/firmware-rafiki.svg',
+			cardTitle: 'Servicio 1',
+			cardText: 'Lorem ipsum dolor sit amet consectetur. Enim sit faucibus porttitor molestie suspendisse dignissim nam dictum.',
+		},
+		{
+			cardImgUrl: '/assets/images/firmware-cuate.svg',
+			cardTitle: 'Servicio 2',
+			cardText: 'Lorem ipsum dolor sit amet consectetur. Enim sit faucibus porttitor molestie suspendisse dignissim nam dictum.',
+		},
+		{
+			cardImgUrl: '/assets/images/version-control-bro.svg',
+			cardTitle: 'Servicio 3',
+			cardText: 'Lorem ipsum dolor sit amet consectetur. Enim sit faucibus porttitor molestie suspendisse dignissim nam dictum.',
+		},
+	]
+} 

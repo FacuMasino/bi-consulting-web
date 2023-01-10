@@ -21,9 +21,13 @@ export const Heading = styled.h2`
 	}
 `;
 
-export const ServicesRow = styled.div`
+export const ServicesContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-evenly;
+	@media screen and (max-width: 960px) {
+		flex-direction: column;
+		gap: 2rem;
+	}
 `;
