@@ -1,34 +1,42 @@
-import React from 'react'
-import { Heading, ServicesContainer, ServicesSection } from './Services.elements'
-import { Container } from '../../globalStyles';
-import ServicesCard from '../ServicesCard/ServicesCard';
+import React from "react";
+import {
+  Heading,
+  ServicesContainer,
+  ServicesSection,
+} from "./Services.elements";
+import { Container } from "../../globalStyles";
+import ServicesCard from "../ServicesCard/ServicesCard";
 
 type ServicesCardInfo = {
-	cardImgUrl: string,
-	cardTitle: string,
-	cardText: string,
-}
+  cardImgUrl: string;
+  cardTitle: string;
+  cardText: string;
+};
 
 interface ServicesCardList {
-	servicesArray: Array<ServicesCardInfo>;
+  servicesArray: Array<ServicesCardInfo>;
 }
 
-const Services = ({servicesArray}: ServicesCardList) => {
+const Services = ({ servicesArray }: ServicesCardList) => {
   return (
-	<ServicesSection>
-		<Container>
-			<Heading>Lo que ofrecemos</Heading>
-			<ServicesContainer>
-				{servicesArray.map((info) =>{
-					return (
-						<ServicesCard {...info} />
-					);
-				})}
-				{/* <ServicesCard /> */}
-			</ServicesContainer>
-		</Container>
-	</ServicesSection>
-  )
-}
+    <ServicesSection>
+      <Container>
+        <Heading>Lo que ofrecemos</Heading>
+        <ServicesContainer>
+          {servicesArray.map((info) => {
+            return (
+              <ServicesCard
+                cardImgUrl={info.cardImgUrl}
+                cardTitle={info.cardTitle}
+                cardText={info.cardText}
+              />
+            );
+          })}
+          {/* <ServicesCard /> */}
+        </ServicesContainer>
+      </Container>
+    </ServicesSection>
+  );
+};
 
-export default Services
+export default Services;

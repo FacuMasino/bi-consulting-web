@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Container, Colors } from '../../globalStyles';
-import { Link } from 'react-router-dom';
-import Logo from '../../assets/images/logo.svg';
+import { Container, Colors } from "../../globalStyles";
+import { Link } from "react-router-dom";
+import Logo from "../../assets/images/logo.svg";
 
 export interface NavMenuProps {
   click: boolean;
@@ -12,10 +12,10 @@ export const Nav = styled.nav`
   align-items: center;
   justify-content: center;
   position: sticky;
-  top:0;
+  top: 0;
   background: #fff;
   color: ${Colors.primary.blue};
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   z-index: 1000;
@@ -23,7 +23,7 @@ export const Nav = styled.nav`
 `;
 
 export const NavBarContainer = styled(Container)`
-	display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   height: 90px;
@@ -70,7 +70,7 @@ export const NavMenu = styled.ul<NavMenuProps>`
     height: calc(100vh - 60px);
     position: absolute;
     top: 60px;
-    left: ${({click}) => (click ? 0:'-100%')};
+    left: ${({ click }) => (click ? 0 : "-100%")};
     transition: all 0.5s ease;
     font-size: 1.8rem;
     z-index: 0;
@@ -78,13 +78,13 @@ export const NavMenu = styled.ul<NavMenuProps>`
 `;
 
 export const NavMenuItem = styled.li`
-  &:nth-child(2n+1) {
-      padding: 0 1.5rem 0 1.5rem;
+  &:nth-child(2n + 1) {
+    padding: 0 1.5rem 0 1.5rem;
   }
   @media screen and (max-width: 960px) {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-    &:nth-child(2n+1) {
+    &:nth-child(2n + 1) {
       padding: 2.5rem;
     }
     width: 100%;
@@ -105,13 +105,13 @@ export const NavMenuLink = styled(Link)`
     left: 0;
     bottom: -4px;
     background-color: transparent;
-    transform: scale(0,1);
-    transition: transform .3s;
+    transform: scale(0, 1);
+    transition: transform 0.3s;
     transform-origin: right top;
   }
   &:hover {
     &:after {
-      transform: scale(1,1);
+      transform: scale(1, 1);
       transform-origin: left top;
       background-color: ${Colors.primary.blue};
     }
