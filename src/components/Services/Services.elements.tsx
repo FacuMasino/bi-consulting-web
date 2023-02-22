@@ -6,18 +6,24 @@ export const ServicesSection = styled.section`
   align-items: center;
   background-color: ${Colors.neutral.lightBlue};
   padding: 2rem 0;
+  margin: 3.5rem 0;
+  @media screen and (max-width: 960px) {
+    margin: 1.5rem 0;
+  }
 `;
 
 export const Heading = styled.h2`
   margin-bottom: 25px;
-  font-size: ${FontSize.desktop.heading};
+  font-size: ${FontSize.desktop.sectionTitle};
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  line-height: 65px;
+  line-height: 2.5rem;
   color: ${Colors.primary.blue};
   @media screen and (max-width: 960px) {
-    font-size: ${FontSize.mobile.heading};
-    line-height: 45px;
+    font-size: ${FontSize.mobile.sectionTitle};
+    line-height: 2.2rem;
+    margin-bottom: 0.8rem;
+    text-align: center;
   }
 `;
 

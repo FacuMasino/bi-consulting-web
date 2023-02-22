@@ -1,7 +1,14 @@
 import GlobalStyle from "./globalStyles";
 import { Navbar, HeroHeader, InfoSection, FeaturesList } from "./components";
-import { sectionOne, featuresList, servicesList } from "./data";
+import {
+  sectionOne,
+  sectionTwo,
+  featuresList,
+  servicesList,
+  ourTechsList,
+} from "./data";
 import Services from "./components/Services/Services";
+import OurTechs from "./components/OurTechs/OurTechs";
 
 function App() {
   return (
@@ -14,6 +21,7 @@ function App() {
         textAlign={sectionOne.textAlign}
         textWidth={sectionOne.textWidth}
         heading={sectionOne.heading}
+        headingAlign={sectionOne.headingAlign}
         blockText={sectionOne.blockText}
       />
       <FeaturesList
@@ -21,6 +29,16 @@ function App() {
         featuresArray={featuresList.featuresArray}
       />
       <Services servicesArray={servicesList.servicesArray} />
+      <InfoSection
+        flexDir={sectionTwo.flexDir}
+        textAlign={sectionTwo.textAlign}
+        textWidth={sectionTwo.textWidth}
+        heading={sectionTwo.heading}
+        headingAlign={sectionTwo.headingAlign}
+        blockText={sectionTwo.blockText}
+        imgUrl={sectionTwo.imgUrl}
+      />
+      <OurTechs techsArray={ourTechsList.featuresArray} />
     </>
   );
 }

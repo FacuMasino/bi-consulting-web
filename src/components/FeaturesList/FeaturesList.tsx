@@ -9,7 +9,7 @@ import {
 
 type TFeaturesList = {
   iconUrl: string;
-  iconText: string;
+  iconText?: string;
 };
 
 interface FeaturesListProps {
@@ -25,7 +25,7 @@ const FeaturesList = ({ flexDir, featuresArray }: FeaturesListProps) => {
           return (
             <ItemWrapper flexDir={flexDir === "row" ? "column" : "row"}>
               <IconItem src={iconUrl} />
-              <TextItem>{iconText}</TextItem>
+              {iconText ? <TextItem>{iconText}</TextItem> : ""}
             </ItemWrapper>
           );
         })}

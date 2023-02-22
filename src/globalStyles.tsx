@@ -21,13 +21,15 @@ export const Colors = {
 
 export const FontSize = {
   desktop: {
-    heading: "2.2rem",
-    subHeading: "1.4rem",
+    sectionTitle: "2.2rem",
+    cardTitle: "1.4rem",
+    subTitle: "1.6rem",
     paragraph: "1.12rem",
   },
   mobile: {
-    heading: "2rem",
-    subHeading: "1.2rem",
+    sectionTitle: "2rem",
+    cardTitle: "1.2rem",
+    subTitle: "1.3rem",
     paragraph: "1rem",
   },
 };

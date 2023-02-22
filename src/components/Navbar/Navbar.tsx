@@ -10,50 +10,49 @@ import {
 } from "./Navbar.elements";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
-//import { IconLookup, iconDefinition, findIconDefinitions }  from '@fortawesome/fontawesome-svg-core';
 
 const Navbar = () => {
-  const [click, setClick] = useState(false);
+  const [IsNavbarOpen, setIsNavbarOpen] = useState(false);
 
-  const handleClick = () => {
-    setClick(!click);
+  const handleNavbarClick = () => {
+    setIsNavbarOpen(!IsNavbarOpen);
   };
 
   return (
     <>
       <Nav>
         <NavBarContainer>
-          <NavLogo to="/">{/* <NavIcon /> */}</NavLogo>
-          <MobileMenu onClick={handleClick}>
-            {click ? (
+          <NavLogo to="/" />
+          <MobileMenu onClick={handleNavbarClick}>
+            {IsNavbarOpen ? (
               <FontAwesomeIcon icon={faXmark} />
             ) : (
               <FontAwesomeIcon icon={faBars} />
             )}
           </MobileMenu>
-          <NavMenu click={click}>
+          <NavMenu isOpen={IsNavbarOpen}>
             <NavMenuItem>
-              <NavMenuLink to="/" onClick={handleClick}>
+              <NavMenuLink to="/" onClick={handleNavbarClick}>
                 HOME
               </NavMenuLink>
             </NavMenuItem>
             <NavMenuItem>
-              <NavMenuLink to="/" onClick={handleClick}>
+              <NavMenuLink to="/" onClick={handleNavbarClick}>
                 SERVICIOS
               </NavMenuLink>
             </NavMenuItem>
             <NavMenuItem>
-              <NavMenuLink to="/" onClick={handleClick}>
+              <NavMenuLink to="/" onClick={handleNavbarClick}>
                 QUIENES SOMOS
               </NavMenuLink>
             </NavMenuItem>
             <NavMenuItem>
-              <NavMenuLink to="/" onClick={handleClick}>
+              <NavMenuLink to="/" onClick={handleNavbarClick}>
                 CLIENTES
               </NavMenuLink>
             </NavMenuItem>
             <NavMenuItem>
-              <NavMenuLink to="/" onClick={handleClick}>
+              <NavMenuLink to="/" onClick={handleNavbarClick}>
                 CONTACTO
               </NavMenuLink>
             </NavMenuItem>

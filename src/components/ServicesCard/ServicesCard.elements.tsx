@@ -35,12 +35,12 @@ export const CardTitle = styled.h3`
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
-  font-size: ${FontSize.desktop.subHeading};
+  font-size: ${FontSize.desktop.cardTitle};
   line-height: 2.25rem;
   color: ${Colors.primary.blue};
   text-transform: uppercase;
   @media screen and (max-width: 960px) {
-    font-size: ${FontSize.mobile.subHeading};
+    font-size: ${FontSize.mobile.cardTitle};
     line-height: 2rem;
   }
 `;

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo.svg";
 
 export interface NavMenuProps {
-  click: boolean;
+  isOpen: boolean;
 }
 
 export const Nav = styled.nav`
@@ -46,7 +46,6 @@ export const NavLogo = styled(Link)`
   }
 `;
 
-// Menu hamburguesa
 export const MobileMenu = styled.div`
   display: none;
 
@@ -70,7 +69,7 @@ export const NavMenu = styled.ul<NavMenuProps>`
     height: calc(100vh - 60px);
     position: absolute;
     top: 60px;
-    left: ${({ click }) => (click ? 0 : "-100%")};
+    left: ${({ isOpen }) => (isOpen ? 0 : "-100%")};
     transition: all 0.5s ease;
     font-size: 1.8rem;
     z-index: 0;
