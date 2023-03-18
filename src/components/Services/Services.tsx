@@ -23,16 +23,18 @@ const Services = ({ servicesArray }: ServicesCardList) => {
       <Container>
         <Heading>Lo que ofrecemos</Heading>
         <ServicesContainer>
-          {servicesArray.map((info) => {
-            return (
-              <ServicesCard
-                cardImgUrl={info.cardImgUrl}
-                cardTitle={info.cardTitle}
-                cardText={info.cardText}
-              />
-            );
-          })}
-          {/* <ServicesCard /> */}
+          {servicesArray.map(
+            ({ cardImgUrl, cardTitle, cardText }: ServicesCardInfo, index) => {
+              return (
+                <ServicesCard
+                  key={index}
+                  cardImgUrl={cardImgUrl}
+                  cardTitle={cardTitle}
+                  cardText={cardText}
+                />
+              );
+            },
+          )}
         </ServicesContainer>
       </Container>
     </ServicesSection>

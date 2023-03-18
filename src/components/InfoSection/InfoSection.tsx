@@ -37,9 +37,13 @@ const InfoSection = ({
         </Heading>
         <InfoWrapper>
           <TextWrapper>
-            {blockText.map((text) => {
+            {blockText.map((text, index) => {
               return (
-                <InfoText textWidth={textWidth} textAlign={textAlign}>
+                <InfoText
+                  key={index}
+                  textWidth={textWidth}
+                  textAlign={textAlign}
+                >
                   {text}
                 </InfoText>
               );

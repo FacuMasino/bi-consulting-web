@@ -21,9 +21,12 @@ const FeaturesList = ({ flexDir, featuresArray }: FeaturesListProps) => {
   return (
     <Container>
       <FeaturesContainer flexDir={flexDir}>
-        {featuresArray.map(({ iconUrl, iconText }: TFeaturesList) => {
+        {featuresArray.map(({ iconUrl, iconText }: TFeaturesList, index) => {
           return (
-            <ItemWrapper flexDir={flexDir === "row" ? "column" : "row"}>
+            <ItemWrapper
+              key={index}
+              flexDir={flexDir === "row" ? "column" : "row"}
+            >
               <IconItem src={iconUrl} />
               {iconText ? <TextItem>{iconText}</TextItem> : ""}
             </ItemWrapper>

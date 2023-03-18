@@ -6,6 +6,15 @@ const GlobalStyle = createGlobalStyle`
 		margin: 0;
 		padding: 0;
 	}
+  .LazyLoad {
+    background-size: cover;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+  }
+
+  .is-visible {
+    opacity: 1;
+  }
 `;
 
 export const Colors = {

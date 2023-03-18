@@ -9,6 +9,7 @@ import {
 } from "./data";
 import Services from "./components/Services/Services";
 import OurTechs from "./components/OurTechs/OurTechs";
+import { ClientsCarousel } from "./components/ClientsCarousel/ClientsCarousel";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         imgUrl={sectionTwo.imgUrl}
       />
       <OurTechs techsArray={ourTechsList.featuresArray} />
+      <ClientsCarousel />
     </>
   );
 }

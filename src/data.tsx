@@ -28,6 +28,13 @@ interface ServicesCardList {
   servicesArray: Array<ServicesCardInfo>;
 }
 
+type ClientProps = {
+  clientImg: string;
+  clientTitle: string;
+  clientText: string;
+  clientService: string;
+};
+
 export const sectionOne: ISection = {
   textAlign: "center",
   flexDir: "column",
@@ -110,3 +117,20 @@ export const ourTechsList: IFeaturesList = {
     },
   ],
 };
+
+export const clientsList: Array<ClientProps> = [
+  {
+    clientImg: "assets/images/arcor90x90.png",
+    clientTitle: "Arcor",
+    clientText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    clientService: "Servicio brindado 1",
+  },
+  {
+    clientImg: "assets/images/translorenzetti-logo-black.png",
+    clientTitle: "Transporte Lorenzetti",
+    clientText:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    clientService: "Servicio brindado 2",
+  },
+];

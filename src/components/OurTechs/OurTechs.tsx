@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from "../../globalStyles";
 import FeaturesList from "../FeaturesList/FeaturesList";
 import { Heading, OurTechsContainer } from "./OurTechs.elements";
 
@@ -15,7 +16,9 @@ const OurTechs = ({ techsArray }: OurTechsArray) => {
   return (
     <>
       <OurTechsContainer>
-        <Heading>Tecnologías que utilizamos</Heading>
+        <Container>
+          <Heading>Tecnologías que utilizamos</Heading>
+        </Container>
         <FeaturesList flexDir="row" featuresArray={techsArray}></FeaturesList>
       </OurTechsContainer>
     </>
