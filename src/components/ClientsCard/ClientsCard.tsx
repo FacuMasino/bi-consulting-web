@@ -1,5 +1,4 @@
 import React from "react";
-import LazyLoad from "react-lazy-load";
 
 import {
   ClientBody,
@@ -25,9 +24,7 @@ export const ClientsCard = ({
 }: ClientsProps): JSX.Element => {
   return (
     <ClientWrapper>
-      <LazyLoad height={130} width={130}>
-        <ClientImg src={clientImg} />
-      </LazyLoad>
+      <ClientImg src={clientImg} />
       <ClientBody>
         <ClientTitle>{clientTitle}</ClientTitle>
         <ClientText>{clientText}</ClientText>
