@@ -11,6 +11,7 @@ import {
 } from "./InfoSection.elements";
 
 interface InfoProps {
+  name?: string;
   textAlign: string;
   flexDir?: string;
   textWidth?: string;
@@ -21,6 +22,7 @@ interface InfoProps {
 }
 
 const InfoSection = ({
+  name,
   flexDir,
   textAlign,
   textWidth,
@@ -30,7 +32,7 @@ const InfoSection = ({
   imgUrl,
 }: InfoProps): JSX.Element => {
   return (
-    <Container>
+    <Container name={name}>
       <InfoContainer flexDir={flexDir}>
         <Heading headingAlign={headingAlign} textAlign={textAlign}>
           {heading}

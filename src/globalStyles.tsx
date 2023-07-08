@@ -1,4 +1,9 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { Link } from "react-scroll";
+
+export interface ContainerProps {
+  name?: string;
+}
 
 const GlobalStyle = createGlobalStyle`
 	* {
@@ -43,13 +48,17 @@ export const FontSize = {
   },
 };
 
-export const Container = styled.div`
+export const Container = styled.div<ContainerProps>`
   width: 100%;
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+`;
+
+export const StyledLink = styled(Link)`
+  cursor: pointer;
 `;
 
 export default GlobalStyle;

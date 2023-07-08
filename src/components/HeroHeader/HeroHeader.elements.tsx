@@ -2,7 +2,11 @@ import styled from "styled-components";
 import { Colors } from "../../globalStyles";
 import bottomShape from "../../assets/images/hero-bottom-shape.svg";
 
-export const HeroHead = styled.div`
+export interface HeroHeadProps {
+  name: string;
+}
+
+export const HeroHead = styled.div<HeroHeadProps>`
   background: linear-gradient(${Colors.primary.linearGradient});
   display: flex;
   align-items: center;

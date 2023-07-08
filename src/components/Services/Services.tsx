@@ -14,12 +14,13 @@ type ServicesCardInfo = {
 };
 
 interface ServicesCardList {
+  name: string;
   servicesArray: Array<ServicesCardInfo>;
 }
 
-const Services = ({ servicesArray }: ServicesCardList) => {
+const Services = ({ name, servicesArray }: ServicesCardList) => {
   return (
-    <ServicesSection>
+    <ServicesSection name={name}>
       <Container>
         <Heading>Lo que ofrecemos</Heading>
         <ServicesContainer>

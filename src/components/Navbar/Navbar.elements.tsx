@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { Container, Colors } from "../../globalStyles";
-import { Link } from "react-router-dom";
+import { StyledLink, Container, Colors } from "../../globalStyles";
 import Logo from "../../assets/images/logo.svg";
 
 export interface NavMenuProps {
@@ -32,7 +31,7 @@ export const NavBarContainer = styled(Container)`
   }
 `;
 
-export const NavLogo = styled(Link)`
+export const NavLogo = styled(StyledLink)`
   justify-self: flex-start;
   background-image: url(${Logo});
   background-size: contain;
@@ -90,7 +89,7 @@ export const NavMenuItem = styled.li`
   }
 `;
 
-export const NavMenuLink = styled(Link)`
+export const NavMenuLink = styled(StyledLink)`
   color: ${Colors.primary.blue};
   display: inline-block;
   position: relative;

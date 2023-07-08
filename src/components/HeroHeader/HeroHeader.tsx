@@ -13,9 +13,9 @@ import {
 import { Container } from "../../globalStyles";
 import headIllustration from "../../assets/images/hero-illustration.svg";
 
-const HeroHeader = () => {
+const HeroHeader = ({ name }: { name: string }) => {
   return (
-    <HeroHead>
+    <HeroHead name={name}>
       <Container>
         <HeroRow>
           <HeroColumn>

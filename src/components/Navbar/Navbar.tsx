@@ -22,7 +22,7 @@ const Navbar = () => {
     <>
       <Nav>
         <NavBarContainer>
-          <NavLogo to="/" />
+          <NavLogo to="home" smooth={true} duration={500} />
           <MobileMenu onClick={handleNavbarClick}>
             {IsNavbarOpen ? (
               <FontAwesomeIcon icon={faXmark} />
@@ -32,22 +32,44 @@ const Navbar = () => {
           </MobileMenu>
           <NavMenu isOpen={IsNavbarOpen}>
             <NavMenuItem>
-              <NavMenuLink to="/" onClick={handleNavbarClick}>
+              <NavMenuLink
+                to="home"
+                smooth={true}
+                duration={500}
+                onClick={handleNavbarClick}
+              >
                 HOME
               </NavMenuLink>
             </NavMenuItem>
             <NavMenuItem>
-              <NavMenuLink to="/" onClick={handleNavbarClick}>
+              <NavMenuLink
+                to="services"
+                smooth={true}
+                duration={500}
+                offset={-60}
+                onClick={handleNavbarClick}
+              >
                 SERVICIOS
               </NavMenuLink>
             </NavMenuItem>
             <NavMenuItem>
-              <NavMenuLink to="/" onClick={handleNavbarClick}>
+              <NavMenuLink
+                to="about"
+                smooth={true}
+                duration={500}
+                offset={-90}
+                onClick={handleNavbarClick}
+              >
                 QUIENES SOMOS
               </NavMenuLink>
             </NavMenuItem>
             <NavMenuItem>
-              <NavMenuLink to="/" onClick={handleNavbarClick}>
+              <NavMenuLink
+                to="clients"
+                smooth={true}
+                duration={500}
+                onClick={handleNavbarClick}
+              >
                 CLIENTES
               </NavMenuLink>
             </NavMenuItem>

@@ -16,7 +16,7 @@ function App() {
     <>
       <GlobalStyle />
       <Navbar />
-      <HeroHeader />
+      <HeroHeader name="home" />
       <InfoSection
         flexDir={sectionOne.flexDir}
         textAlign={sectionOne.textAlign}
@@ -29,8 +29,9 @@ function App() {
         flexDir={featuresList.flexDir}
         featuresArray={featuresList.featuresArray}
       />
-      <Services servicesArray={servicesList.servicesArray} />
+      <Services name="services" servicesArray={servicesList.servicesArray} />
       <InfoSection
+        name="about"
         flexDir={sectionTwo.flexDir}
         textAlign={sectionTwo.textAlign}
         textWidth={sectionTwo.textWidth}
@@ -40,7 +41,7 @@ function App() {
         imgUrl={sectionTwo.imgUrl}
       />
       <OurTechs techsArray={ourTechsList.featuresArray} />
-      <ClientsCarousel />
+      <ClientsCarousel name="clients" />
     </>
   );
 }
