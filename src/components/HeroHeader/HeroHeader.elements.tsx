@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Colors } from "../../globalStyles";
-import bottomShape from "../../assets/images/hero-bottom-shape.svg";
+import { ReactComponent as bottomShape } from "../../assets/images/hero-bottom-shape.svg";
 
 export interface HeroHeadProps {
   name: string;
@@ -14,31 +14,20 @@ export const HeroHead = styled.div<HeroHeadProps>`
   min-height: 400px;
   position: relative;
   padding-bottom: 90px;
+  overflow: hidden;
   @media screen and (max-width: 960px) {
     max-height: calc(100vh - 60px);
     padding-bottom: 0;
   }
 `;
 
-export const HeroShape = styled.div`
+export const HeroShape = styled(bottomShape)`
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  &::after {
-    content: "";
-    background-image: url(${bottomShape});
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
-    display: block;
-    width: calc(300% + 1.3px);
-    height: 90px;
-    @media screen and (max-width: 960px) {
-      display: none;
-    }
+  height: 90px;
+  width: calc(300% + 1.3px);
+  @media screen and (max-width: 960px) {
+    display: none;
   }
 `;
 

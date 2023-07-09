@@ -2,3 +2,8 @@ export { default as Navbar } from "./Navbar/Navbar";
 export { default as HeroHeader } from "./HeroHeader/HeroHeader";
 export { default as InfoSection } from "./InfoSection/InfoSection";
 export { default as FeaturesList } from "./FeaturesList/FeaturesList";
+export { default as Services } from "./Services/Services";
+export { default as OurTechs } from "./OurTechs/OurTechs";
+export { default as ClientsCarousel } from "./ClientsCarousel/ClientsCarousel";
+export { default as Footer } from "./Footer/Footer";
+export { default as Contact } from "./Contact/Contact";

@@ -1,5 +1,15 @@
 import GlobalStyle from "./globalStyles";
-import { Navbar, HeroHeader, InfoSection, FeaturesList } from "./components";
+import {
+  Navbar,
+  HeroHeader,
+  InfoSection,
+  FeaturesList,
+  Services,
+  OurTechs,
+  ClientsCarousel,
+  Contact,
+  Footer,
+} from "./components";
 import {
   sectionOne,
   sectionTwo,
@@ -7,9 +17,6 @@ import {
   servicesList,
   ourTechsList,
 } from "./data";
-import Services from "./components/Services/Services";
-import OurTechs from "./components/OurTechs/OurTechs";
-import { ClientsCarousel } from "./components/ClientsCarousel/ClientsCarousel";
 
 function App() {
   return (
@@ -42,6 +49,9 @@ function App() {
       />
       <OurTechs techsArray={ourTechsList.featuresArray} />
       <ClientsCarousel name="clients" />
+      <Footer>
+        <Contact />
+      </Footer>
     </>
   );
 }

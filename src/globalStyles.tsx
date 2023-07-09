@@ -16,7 +16,9 @@ const GlobalStyle = createGlobalStyle`
     opacity: 0;
     transition: all 1s ease-in-out;
   }
-
+  body {
+    min-height: 100vh;
+  }
   .is-visible {
     opacity: 1;
   }

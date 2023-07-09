@@ -16,3 +16,5 @@ export const ClientsCarousel = ({ name }: { name: string }) => {
     </Container>
   );
 };
+
+export default ClientsCarousel;
