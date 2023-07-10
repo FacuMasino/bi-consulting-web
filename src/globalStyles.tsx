@@ -28,6 +28,7 @@ export const Colors = {
   primary: {
     linearGradient: "to right, #182641, #16629C",
     blue: "#182641",
+    highlight: "#4ECFD4",
   },
   neutral: {
     lightBlue: "#E5EDF2",

@@ -114,4 +114,11 @@ export const NavMenuLink = styled(StyledLink)`
       background-color: ${Colors.primary.blue};
     }
   }
+  &.active {
+    &:after {
+      transform: scale(1, 1);
+      transform-origin: left top;
+      background-color: ${Colors.primary.blue};
+    }
+  }
 `;

@@ -36,6 +36,9 @@ const Navbar = () => {
                 to="home"
                 smooth={true}
                 duration={500}
+                offset={-90}
+                activeClass="active"
+                spy={true}
                 onClick={handleNavbarClick}
               >
                 HOME
@@ -46,7 +49,9 @@ const Navbar = () => {
                 to="services"
                 smooth={true}
                 duration={500}
-                offset={-60}
+                offset={-90}
+                activeClass="active"
+                spy={true}
                 onClick={handleNavbarClick}
               >
                 SERVICIOS
@@ -58,6 +63,8 @@ const Navbar = () => {
                 smooth={true}
                 duration={500}
                 offset={-90}
+                activeClass="active"
+                spy={true}
                 onClick={handleNavbarClick}
               >
                 QUIENES SOMOS
@@ -68,13 +75,24 @@ const Navbar = () => {
                 to="clients"
                 smooth={true}
                 duration={500}
+                offset={-90}
+                activeClass="active"
+                spy={true}
                 onClick={handleNavbarClick}
               >
                 CLIENTES
               </NavMenuLink>
             </NavMenuItem>
             <NavMenuItem>
-              <NavMenuLink to="/" onClick={handleNavbarClick}>
+              <NavMenuLink
+                to="contact"
+                smooth={true}
+                duration={500}
+                offset={-90}
+                activeClass="active"
+                spy={true}
+                onClick={handleNavbarClick}
+              >
                 CONTACTO
               </NavMenuLink>
             </NavMenuItem>

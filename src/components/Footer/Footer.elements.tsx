@@ -13,8 +13,7 @@ export const FooterContainer = styled.div`
   width: 100%;
   overflow: hidden;
   @media screen and (max-width: 960px) {
-    max-height: calc(100vh - 60px);
-    padding-bottom: 0;
+    padding-top: 1.5rem;
   }
 `;
 
