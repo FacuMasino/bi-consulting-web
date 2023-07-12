@@ -40,7 +40,7 @@ export const ClientsCarouselList2 = ({ clients }: ClientsLArray) => {
       if (!isPaused) {
         updateClient(activeClient + 1);
       }
-    }, 3000);
+    }, 3500);
 
     return () => {
       if (interval) {

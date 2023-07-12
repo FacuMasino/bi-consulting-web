@@ -34,7 +34,7 @@ export const Contact = () => {
   };
 
   return (
-    <Container name="contact">
+    <Container>
       <Heading>¿Tenés un proyecto en mente?</Heading>
       <ContactRow>
         <ContactColumn>

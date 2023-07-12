@@ -13,6 +13,13 @@ export const ClientWrapper = styled.div`
   width: 29rem;
   padding: 0.8rem;
   gap: 0.8rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  margin: 0.5rem;
+  transition: transform 0.35s;
+  transition-timing-function: ease-in-out;
+  &:hover {
+    transform: scale(1.11);
+  }
   @media screen and (max-width: 960px) {
     min-width: 18rem;
     width: 60%;
@@ -68,7 +75,7 @@ export const ClientText = styled.p`
 export const ClientService = styled.p`
   font-family: "Inter";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-size: ${FontSize.desktop.paragraph};
   line-height: 1.2rem;
   color: ${Colors.primary.blue};

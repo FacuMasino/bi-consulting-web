@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Nav,
   NavBarContainer,
@@ -13,6 +13,19 @@ import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [IsNavbarOpen, setIsNavbarOpen] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  const updateNavBg = () => {
+    if (window.scrollY >= 90) {
+      setIsScrolling(true);
+    } else {
+      setIsScrolling(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", updateNavBg);
+  }, []);
 
   const handleNavbarClick = () => {
     setIsNavbarOpen(!IsNavbarOpen);
@@ -20,9 +33,14 @@ const Navbar = () => {
 
   return (
     <>
-      <Nav>
+      <Nav isScrolling={isScrolling}>
         <NavBarContainer>
-          <NavLogo to="home" smooth={true} duration={500} />
+          <NavLogo
+            isScrolling={isScrolling}
+            to="home"
+            smooth={true}
+            duration={500}
+          />
           <MobileMenu onClick={handleNavbarClick}>
             {IsNavbarOpen ? (
               <FontAwesomeIcon icon={faXmark} />

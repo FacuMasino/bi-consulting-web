@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import { StyledLink, Container, Colors } from "../../globalStyles";
 import Logo from "../../assets/images/logo.svg";
+import LogoIcon from "../../assets/images/logo-icon.svg";
 
 export interface NavMenuProps {
   isOpen: boolean;
 }
-
-export const Nav = styled.nav`
+interface NavProps {
+  isScrolling: boolean;
+}
+export const Nav = styled.nav<NavProps>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,16 +34,19 @@ export const NavBarContainer = styled(Container)`
   }
 `;
 
-export const NavLogo = styled(StyledLink)`
+export const NavLogo = styled(StyledLink)<NavProps>`
   justify-self: flex-start;
-  background-image: url(${Logo});
+  background-image: ${({ isScrolling }) =>
+    isScrolling ? "url(" + LogoIcon + ")" : "url(" + Logo + ")"};
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   width: 263px;
   height: 70px;
+  transition: all 0.15s;
+  transition-timing-function: ease-in-out;
   @media screen and (max-width: 960px) {
-    width: 200px;
+    width: ${({ isScrolling }) => (isScrolling ? "50px" : "200px")};
     height: 50px;
   }
 `;

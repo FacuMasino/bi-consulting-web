@@ -22,6 +22,10 @@ const GlobalStyle = createGlobalStyle`
   .is-visible {
     opacity: 1;
   }
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 export const Colors = {

@@ -137,7 +137,7 @@ export const FormButton = styled.button`
   background: none;
   font-family: Inter;
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #4ecfd4;
   line-height: 2rem;
   border-radius: 8px;
