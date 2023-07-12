@@ -26,6 +26,9 @@ export const ClientWrapper = styled.div`
     flex-direction: column;
     padding: 0.7rem;
     gap: 0.7rem;
+    &:hover {
+      transform: scale(1);
+    }
   }
 `;
 
