@@ -31,6 +31,7 @@ function App() {
         heading={sectionOne.heading}
         headingAlign={sectionOne.headingAlign}
         blockText={sectionOne.blockText}
+        animate={false}
       />
       <FeaturesList
         flexDir={featuresList.flexDir}
@@ -46,6 +47,7 @@ function App() {
         headingAlign={sectionTwo.headingAlign}
         blockText={sectionTwo.blockText}
         imgUrl={sectionTwo.imgUrl}
+        animate={true}
       />
       <OurTechs techsArray={ourTechsList.featuresArray} />
       <ClientsCarousel name="clients" />

@@ -6,6 +6,7 @@ import {
   ItemWrapper,
   TextItem,
 } from "./FeaturesList.elements";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 type TFeaturesList = {
   iconUrl: string;
@@ -23,13 +24,20 @@ const FeaturesList = ({ flexDir, featuresArray }: FeaturesListProps) => {
       <FeaturesContainer flexDir={flexDir}>
         {featuresArray.map(({ iconUrl, iconText }: TFeaturesList, index) => {
           return (
-            <ItemWrapper
-              key={index}
-              flexDir={flexDir === "row" ? "column" : "row"}
+            <AnimationOnScroll
+              animateIn="animate__fadeIn"
+              offset={80}
+              animateOnce={true}
+              delay={index * 150}
             >
-              <IconItem src={iconUrl} />
-              {iconText ? <TextItem>{iconText}</TextItem> : ""}
-            </ItemWrapper>
+              <ItemWrapper
+                key={index}
+                flexDir={flexDir === "row" ? "column" : "row"}
+              >
+                <IconItem src={iconUrl} />
+                {iconText ? <TextItem>{iconText}</TextItem> : ""}
+              </ItemWrapper>
+            </AnimationOnScroll>
           );
         })}
       </FeaturesContainer>

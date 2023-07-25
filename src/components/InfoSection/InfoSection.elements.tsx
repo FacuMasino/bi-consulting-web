@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Colors, FontSize } from "../../globalStyles";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 interface InfoSectionProps {
   textAlign: string;
@@ -8,6 +9,24 @@ interface InfoSectionProps {
   textWidth: string;
   imgUrl: string;
 }
+
+interface ScrollAnimationProps {
+  animate: boolean;
+}
+
+export const ScrollAnimation = styled(AnimationOnScroll)<ScrollAnimationProps>`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  ${({ animate }) =>
+    !animate &&
+    `
+    animation: none;
+    animation-duration: 0s !important;
+    opacity: 100% !important;
+  `}
+`;
 
 export const InfoContainer = styled.div<Partial<InfoSectionProps>>`
   display: flex;
@@ -53,6 +72,7 @@ export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden; // Avoid scroll animation overflow
 `;
 
 export const Heading = styled.h2<Partial<InfoSectionProps>>`

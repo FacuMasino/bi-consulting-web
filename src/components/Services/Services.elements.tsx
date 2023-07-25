@@ -11,6 +11,7 @@ export const ServicesSection = styled.section<ServicesProps>`
   background-color: ${Colors.neutral.lightBlue};
   padding: 2rem 0;
   margin: 3.5rem 0;
+  overflow: hidden;
   @media screen and (max-width: 960px) {
     margin: 1.5rem 0;
   }

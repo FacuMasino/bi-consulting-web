@@ -8,6 +8,7 @@ import {
   InfoText,
   InfoWrapper,
   TextWrapper,
+  ScrollAnimation,
 } from "./InfoSection.elements";
 
 interface InfoProps {
@@ -19,6 +20,7 @@ interface InfoProps {
   headingAlign: "start" | "center" | "end";
   blockText: Array<String>;
   imgUrl?: string;
+  animate: boolean;
 }
 
 const InfoSection = ({
@@ -30,24 +32,39 @@ const InfoSection = ({
   headingAlign,
   blockText,
   imgUrl,
+  animate,
 }: InfoProps): JSX.Element => {
   return (
     <Container name={name}>
       <InfoContainer flexDir={flexDir}>
-        <Heading headingAlign={headingAlign} textAlign={textAlign}>
-          {heading}
-        </Heading>
+        <ScrollAnimation
+          animateIn="animate__fadeIn"
+          offset={60}
+          animateOnce={true}
+          animate={animate}
+        >
+          <Heading headingAlign={headingAlign} textAlign={textAlign}>
+            {heading}
+          </Heading>
+        </ScrollAnimation>
         <InfoWrapper>
           <TextWrapper>
             {blockText.map((text, index) => {
               return (
-                <InfoText
-                  key={index}
-                  textWidth={textWidth}
-                  textAlign={textAlign}
+                <ScrollAnimation
+                  animateIn="animate__fadeInUp"
+                  offset={60}
+                  animateOnce={true}
+                  animate={animate}
                 >
-                  {text}
-                </InfoText>
+                  <InfoText
+                    key={index}
+                    textWidth={textWidth}
+                    textAlign={textAlign}
+                  >
+                    {text}
+                  </InfoText>
+                </ScrollAnimation>
               );
             })}
           </TextWrapper>

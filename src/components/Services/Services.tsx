@@ -1,4 +1,6 @@
 import React from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+
 import {
   Heading,
   ServicesContainer,
@@ -22,17 +24,30 @@ const Services = ({ name, servicesArray }: ServicesCardList) => {
   return (
     <ServicesSection name={name}>
       <Container>
-        <Heading>Lo que ofrecemos</Heading>
+        <AnimationOnScroll
+          animateIn="animate__fadeInUp"
+          offset={60}
+          animateOnce={true}
+        >
+          <Heading>Lo que ofrecemos</Heading>
+        </AnimationOnScroll>
         <ServicesContainer>
           {servicesArray.map(
             ({ cardImgUrl, cardTitle, cardText }: ServicesCardInfo, index) => {
               return (
-                <ServicesCard
-                  key={index}
-                  cardImgUrl={cardImgUrl}
-                  cardTitle={cardTitle}
-                  cardText={cardText}
-                />
+                <AnimationOnScroll
+                  animateIn="animate__fadeIn"
+                  offset={80}
+                  animateOnce={true}
+                  delay={index * 150}
+                >
+                  <ServicesCard
+                    key={index}
+                    cardImgUrl={cardImgUrl}
+                    cardTitle={cardTitle}
+                    cardText={cardText}
+                  />
+                </AnimationOnScroll>
               );
             },
           )}
