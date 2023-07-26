@@ -87,7 +87,7 @@ const Footer = ({ children }: { children: JSX.Element }) => {
               <ListTitle>Contacto</ListTitle>
               <LinksList>
                 <LinkItem>mail@dominio.com.ar</LinkItem>
-                <LinkItem>+54 2227-000000</LinkItem>
+                <LinkItem>+54 2227-531232</LinkItem>
               </LinksList>
             </LinksContainer>
           </FooterRight>
