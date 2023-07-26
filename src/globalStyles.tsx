@@ -26,6 +26,16 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
+  mark {
+    margin: 0 -0.4em;
+    padding: 0.05em 0.4em;
+    border-radius: 0.8em 0.3em;
+    background: transparent;
+    background-image: linear-gradient( to right, rgb(68 202 203 / 21%), rgb(22 98 156 / 48%) 50%);
+    -webkit-box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
 `;
 
 export const Colors = {
@@ -48,7 +58,7 @@ export const FontSize = {
     paragraph: "1.12rem",
   },
   mobile: {
-    sectionTitle: "2rem",
+    sectionTitle: "1.9rem",
     cardTitle: "1.2rem",
     subTitle: "1.3rem",
     paragraph: "1rem",

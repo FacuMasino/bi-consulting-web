@@ -3,13 +3,7 @@ import { StyledLink, Container, Colors } from "../../globalStyles";
 import Logo from "../../assets/images/logo.svg";
 import LogoIcon from "../../assets/images/logo-icon.svg";
 
-export interface NavMenuProps {
-  isOpen: boolean;
-}
-interface NavProps {
-  isScrolling: boolean;
-}
-export const Nav = styled.nav<NavProps>`
+export const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;

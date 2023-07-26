@@ -73,7 +73,7 @@ export const LinksContainer = styled.div`
   flex-direction: column;
 `;
 
-export const ListTitle = styled.h3`
+export const ListTitle = styled.p`
   color: #fff;
   font-weight: 600;
   font-family: Inter;

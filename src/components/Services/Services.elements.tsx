@@ -1,10 +1,6 @@
 import styled from "styled-components";
 import { Colors, FontSize } from "../../globalStyles";
 
-export interface ServicesProps {
-  name: string;
-}
-
 export const ServicesSection = styled.section<ServicesProps>`
   display: flex;
   align-items: center;

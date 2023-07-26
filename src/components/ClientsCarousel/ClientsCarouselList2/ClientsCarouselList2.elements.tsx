@@ -1,10 +1,6 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-type CarouselInnerProps = {
-  activeClient: number;
-};
-
 export const CarouselContainer = styled.div`
   display: flex;
   flex-direction: row;

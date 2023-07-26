@@ -7,20 +7,22 @@ import {
   CardText,
 } from "./ServicesCard.elements";
 
-interface ServicesCardProps {
-  cardImgUrl: string;
-  cardTitle: string;
-  cardText: string;
-}
-
 const ServicesCard = ({
   cardImgUrl,
+  cardImgAlt,
   cardTitle,
   cardText,
+  index,
 }: ServicesCardProps): JSX.Element => {
   return (
-    <CardWrapper>
-      <CardImg src={cardImgUrl} />
+    <CardWrapper
+      animateIn="animate__fadeIn"
+      offset={80}
+      animateOnce={true}
+      delay={index * 150}
+      key={index}
+    >
+      <CardImg src={cardImgUrl} alt={cardImgAlt} />
       <CardBody>
         <CardTitle>{cardTitle}</CardTitle>
         <CardText>{cardText}</CardText>

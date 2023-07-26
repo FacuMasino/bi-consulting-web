@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <>
-      <Nav isScrolling={isScrolling}>
+      <Nav>
         <NavBarContainer>
           <NavLogo
             isScrolling={isScrolling}

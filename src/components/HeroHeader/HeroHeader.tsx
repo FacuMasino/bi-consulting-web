@@ -11,7 +11,7 @@ import {
   HeroShape,
 } from "./HeroHeader.elements";
 import { Container } from "../../globalStyles";
-import headIllustration from "../../assets/images/hero-illustration.svg";
+import headIllustration from "../../assets/images/hero-illustration-min.svg";
 
 const HeroHeader = ({ name }: { name: string }) => {
   return (
@@ -28,7 +28,12 @@ const HeroHeader = ({ name }: { name: string }) => {
           </HeroColumn>
           <HeroColumn>
             <ImageWrapper>
-              <Img src={headIllustration} />
+              <Img
+                src={headIllustration}
+                alt="Ilustración de una computadora con gráficos estadísticos y un servidor en la nube"
+                width="100%"
+                height="100%"
+              />
             </ImageWrapper>
           </HeroColumn>
         </HeroRow>

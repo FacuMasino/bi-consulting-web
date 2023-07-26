@@ -9,13 +9,6 @@ import {
   ClientWrapper,
 } from "./ClientsCard.elements";
 
-type ClientsProps = {
-  clientImg: string;
-  clientTitle: string;
-  clientText: string;
-  clientService: string;
-};
-
 export const ClientsCard = ({
   clientImg,
   clientTitle,
@@ -24,11 +17,13 @@ export const ClientsCard = ({
 }: ClientsProps): JSX.Element => {
   return (
     <ClientWrapper>
-      <ClientImg src={clientImg} />
+      <ClientImg src={clientImg} alt={`${clientTitle} Logo`} />
       <ClientBody>
         <ClientTitle>{clientTitle}</ClientTitle>
         <ClientText>{clientText}</ClientText>
-        <ClientService>{clientService}</ClientService>
+        <ClientService>
+          <mark>{clientService}</mark>
+        </ClientService>
       </ClientBody>
     </ClientWrapper>
   );

@@ -2,10 +2,6 @@ import styled from "styled-components";
 import { Colors } from "../../globalStyles";
 import { ReactComponent as bottomShape } from "../../assets/images/hero-bottom-shape.svg";
 
-export interface HeroHeadProps {
-  name: string;
-}
-
 export const HeroHead = styled.div<HeroHeadProps>`
   background: linear-gradient(${Colors.primary.linearGradient});
   display: flex;
@@ -76,8 +72,7 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Img = styled.img`
-  max-width: 100%;
-  height: auto;
+  max-width: 550px;
   filter: drop-shadow(0px 4px 70px rgba(42, 141, 156, 0.45));
 `;
 

@@ -11,15 +11,8 @@ import {
 import { faGreaterThan, faLessThan } from "@fortawesome/free-solid-svg-icons";
 import { useSwipeable } from "react-swipeable";
 
-type ClientProps = {
-  clientImg: string;
-  clientTitle: string;
-  clientText: string;
-  clientService: string;
-};
-
 interface ClientsLArray {
-  clients: Array<ClientProps>;
+  clients: Array<ClientsProps>;
 }
 
 export const ClientsCarouselList2 = ({ clients }: ClientsLArray) => {
@@ -67,7 +60,7 @@ export const ClientsCarouselList2 = ({ clients }: ClientsLArray) => {
         onMouseLeave={() => setIsPaused(false)}
       >
         <CarouselInner activeClient={activeClient}>
-          {clients.map(({ ...client }: ClientProps, index: number) => {
+          {clients.map(({ ...client }: ClientsProps, index: number) => {
             return (
               <CarouselItem key={index}>
                 <ClientsCard {...client} />

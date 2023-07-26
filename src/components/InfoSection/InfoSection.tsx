@@ -11,18 +11,6 @@ import {
   ScrollAnimation,
 } from "./InfoSection.elements";
 
-interface InfoProps {
-  name?: string;
-  textAlign: string;
-  flexDir?: string;
-  textWidth?: string;
-  heading: string;
-  headingAlign: "start" | "center" | "end";
-  blockText: Array<String>;
-  imgUrl?: string;
-  animate: boolean;
-}
-
 const InfoSection = ({
   name,
   flexDir,
@@ -32,6 +20,7 @@ const InfoSection = ({
   headingAlign,
   blockText,
   imgUrl,
+  imgAlt,
   animate,
 }: InfoProps): JSX.Element => {
   return (
@@ -56,6 +45,7 @@ const InfoSection = ({
                   offset={60}
                   animateOnce={true}
                   animate={animate}
+                  key={index}
                 >
                   <InfoText
                     key={index}
@@ -70,7 +60,7 @@ const InfoSection = ({
           </TextWrapper>
           {imgUrl ? (
             <ImgWrapper>
-              <Img src={imgUrl} />
+              <Img src={imgUrl} alt={imgAlt} />
             </ImgWrapper>
           ) : (
             ""

@@ -2,18 +2,6 @@ import styled from "styled-components";
 import { Colors, FontSize } from "../../globalStyles";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
-interface InfoSectionProps {
-  textAlign: string;
-  headingAlign: "start" | "center" | "end";
-  flexDir: string;
-  textWidth: string;
-  imgUrl: string;
-}
-
-interface ScrollAnimationProps {
-  animate: boolean;
-}
-
 export const ScrollAnimation = styled(AnimationOnScroll)<ScrollAnimationProps>`
   display: flex;
   flex-direction: column;
@@ -84,6 +72,18 @@ export const Heading = styled.h2<Partial<InfoSectionProps>>`
   color: ${Colors.primary.blue};
   text-align: center;
   align-self: ${({ headingAlign }) => headingAlign};
+  background-image: linear-gradient(
+    120deg,
+    rgb(22 98 156 / 56%) 0%,
+    rgb(68 202 203 / 71%) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  &:hover {
+    background-size: 100% 88%;
+  }
   @media screen and (max-width: 960px) {
     font-size: ${FontSize.mobile.sectionTitle};
     line-height: 2.2rem;

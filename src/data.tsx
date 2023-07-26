@@ -6,11 +6,13 @@ interface ISection {
   headingAlign: "start" | "center" | "end";
   blockText: Array<String>;
   imgUrl?: string;
+  imgAlt?: string;
 }
 
 type TFeaturesList = {
   iconUrl: string;
   iconText?: string;
+  iconAlt?: string;
 };
 
 interface IFeaturesList {
@@ -20,6 +22,7 @@ interface IFeaturesList {
 
 type ServicesCardInfo = {
   cardImgUrl: string;
+  cardImgAlt: string;
   cardTitle: string;
   cardText: string;
 };
@@ -56,7 +59,9 @@ export const sectionTwo: ISection = {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   ],
-  imgUrl: "/assets/images/office-worker.jpg",
+  imgUrl: "/assets/images/office-worker-desktop.jpg",
+  imgAlt:
+    "Fotografía de una persona trabajando en la oficina con su computadora y un café",
 };
 
 export const featuresList: IFeaturesList = {
@@ -64,14 +69,17 @@ export const featuresList: IFeaturesList = {
   featuresArray: [
     {
       iconUrl: "/assets/images/hand-holding-heart-solid.svg",
+      iconAlt: "Ilustración de una mano ofreciendo ayuda",
       iconText: "Razón 1.",
     },
     {
       iconUrl: "/assets/images/handshake-solid.svg",
+      iconAlt: "Ilustración de manos estrechadas",
       iconText: "Razón 2.",
     },
     {
       iconUrl: "/assets/images/rocket-solid.svg",
+      iconAlt: "Ilustración de un cohete",
       iconText: "Razón 3.",
     },
   ],
@@ -81,18 +89,22 @@ export const servicesList: ServicesCardList = {
   servicesArray: [
     {
       cardImgUrl: "/assets/images/firmware-rafiki.svg",
+      cardImgAlt:
+        "Ilustración de una persona ofreciendo asistencia para actualizar su hardware",
       cardTitle: "Servicio 1",
       cardText:
         "Lorem ipsum dolor sit amet consectetur. Enim sit faucibus porttitor molestie suspendisse dignissim nam dictum.",
     },
     {
       cardImgUrl: "/assets/images/firmware-cuate.svg",
+      cardImgAlt: "Ilustración de una persona trabajando en la oficina",
       cardTitle: "Servicio 2",
       cardText:
         "Lorem ipsum dolor sit amet consectetur. Enim sit faucibus porttitor molestie suspendisse dignissim nam dictum.",
     },
     {
       cardImgUrl: "/assets/images/version-control-bro.svg",
+      cardImgAlt: "Ilustración de un programador trabajando",
       cardTitle: "Servicio 3",
       cardText:
         "Lorem ipsum dolor sit amet consectetur. Enim sit faucibus porttitor molestie suspendisse dignissim nam dictum.",
@@ -105,15 +117,19 @@ export const ourTechsList: IFeaturesList = {
   featuresArray: [
     {
       iconUrl: "/assets/images/microsoft.svg",
+      iconAlt: "Logo de Microsoft",
     },
     {
       iconUrl: "/assets/images/vscode.svg",
+      iconAlt: "Logo de Visual Studio Code",
     },
     {
       iconUrl: "/assets/images/dotnet.svg",
+      iconAlt: "Logo de Microsoft .NET",
     },
     {
       iconUrl: "/assets/images/xamarin.svg",
+      iconAlt: "Logo de Xamarin",
     },
   ],
 };

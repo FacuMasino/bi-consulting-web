@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { Colors, FontSize } from "../../globalStyles";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
-export const CardWrapper = styled.div`
+export const CardWrapper = styled(AnimationOnScroll)`
   background-color: #fff;
   display: flex;
   flex-direction: column;

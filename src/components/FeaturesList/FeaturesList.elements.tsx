@@ -1,9 +1,16 @@
 import styled from "styled-components";
 import { Colors, FontSize } from "../../globalStyles";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
-interface IFeaturesList {
-  flexDir: "row" | "column";
-}
+export const ScrollAnimation = styled(AnimationOnScroll)<ScrollAnimationProps>`
+  ${({ animate }) =>
+    !animate &&
+    `
+    animation: none;
+    animation-duration: 0s !important;
+    opacity: 100% !important;
+  `}
+`;
 
 export const FeaturesContainer = styled.div<IFeaturesList>`
   display: flex;

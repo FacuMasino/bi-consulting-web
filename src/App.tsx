@@ -36,6 +36,7 @@ function App() {
       <FeaturesList
         flexDir={featuresList.flexDir}
         featuresArray={featuresList.featuresArray}
+        animate={false}
       />
       <Services name="services" servicesArray={servicesList.servicesArray} />
       <InfoSection
@@ -47,6 +48,7 @@ function App() {
         headingAlign={sectionTwo.headingAlign}
         blockText={sectionTwo.blockText}
         imgUrl={sectionTwo.imgUrl}
+        imgAlt={sectionTwo.imgAlt}
         animate={true}
       />
       <OurTechs techsArray={ourTechsList.featuresArray} />

@@ -17,6 +17,7 @@ export const ClientWrapper = styled.div`
   margin: 0.5rem;
   transition: transform 0.35s;
   transition-timing-function: ease-in-out;
+  z-index: 0;
   &:hover {
     transform: scale(1.11);
   }
