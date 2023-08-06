@@ -5,7 +5,7 @@ export interface MsgProps {
 }
 
 export const createWppLink = ({ username, useremail, message }: MsgProps) => {
-  const BASE_URL = "https://tinyurl.com/biconsultingwpp?text=";
+  const BASE_URL = "https://wa.me/542227531232?text=";
   const msg = `Nombre: ${username}\nEmail: ${useremail}\nMensaje: ${message}`;
   return BASE_URL + encodeURIComponent(msg);
 };
